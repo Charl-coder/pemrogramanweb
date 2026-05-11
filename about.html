@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SehatKita</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .about-hero{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .about-hero h2{
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .about-section{
+            padding: 70px 10%;
+        }
+
+        .about-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image img{
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .about-text h3{
+            font-size: 32px;
+            color: #009688;
+            margin-bottom: 20px;
+        }
+
+        .about-text p{
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .stats{
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box{
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .stat-box:hover{
+            transform: translateY(-5px);
+        }
+
+        .stat-box h4{
+            font-size: 28px;
+            color: #009688;
+        }
+
+        .vision-mission{
+            background: #f7f9fc;
+            padding: 70px 10%;
+        }
+
+        .vm-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 30px;
+        }
+
+        .vm-card{
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .vm-card:hover{
+            transform: translateY(-8px);
+        }
+
+        .vm-card h3{
+            color: #009688;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .vm-card ul{
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        @media(max-width:768px){
+
+            .about-hero h2{
+                font-size: 34px;
+            }
+
+            .about-section{
+                padding: 50px 6%;
+            }
+
+            .vision-mission{
+                padding: 50px 6%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <h1 class="logo">SehatKita</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div>
+        <h2>Tentang SehatKita</h2>
+        <p>Klinik modern dengan pelayanan kesehatan terpercaya</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+
+    <div class="about-grid">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200" alt="">
+        </div>
+
+        <div class="about-text">
+            <h3>Kami Peduli Kesehatan Anda</h3>
+
+            <p>
+                SehatKita hadir sebagai klinik kesehatan modern yang
+                memberikan pelayanan terbaik untuk masyarakat dengan
+                fasilitas lengkap dan tenaga medis profesional.
+            </p>
+
+            <p>
+                Kami percaya bahwa kesehatan adalah prioritas utama,
+                sehingga kami selalu memberikan pelayanan yang cepat,
+                nyaman, dan terpercaya.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat-box">
+                    <h4>10+</h4>
+                    <p>Dokter</p>
+                </div>
+
+                <div class="stat-box">
+                    <h4>5K+</h4>
+                    <p>Pasien</p>
+                </div>
+
+                <div class="stat-box">
+                    <h4>24/7</h4>
+                    <p>Layanan</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VISION MISSION -->
+<section class="vision-mission">
+
+    <div class="vm-grid">
+
+        <div class="vm-card">
+            <h3>Visi</h3>
+
+            <p>
+                Menjadi klinik kesehatan modern dan terpercaya dengan
+                pelayanan terbaik untuk seluruh masyarakat.
+            </p>
+        </div>
+
+        <div class="vm-card">
+            <h3>Misi</h3>
+
+            <ul>
+                <li>Memberikan pelayanan kesehatan berkualitas.</li>
+                <li>Mengutamakan kenyamanan pasien.</li>
+                <li>Menggunakan teknologi kesehatan modern.</li>
+                <li>Menyediakan tenaga medis profesional.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 SehatKita. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
