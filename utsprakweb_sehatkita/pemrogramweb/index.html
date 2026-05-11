@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH.SehatKita - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <h1 class="logo">CH.SehatKita</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-content">
+        <div>
+            <h2>Kesehatan Anda Prioritas Kami</h2>
+
+            <p>
+                Klinik modern dengan layanan kesehatan terpercaya,
+                profesional, dan nyaman untuk seluruh keluarga.
+            </p>
+
+            <!-- BUTTON RESPONSIVE -->
+            <button onclick="scrollToForm()">
+                Buat Janji
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features container">
+
+    <div class="card">
+        <h3>Dokter Profesional</h3>
+        <p>Ditangani langsung oleh tenaga medis berpengalaman.</p>
+    </div>
+
+    <div class="card">
+        <h3>Pelayanan Cepat</h3>
+        <p>Pelayanan modern dengan sistem yang efisien.</p>
+    </div>
+
+    <div class="card">
+        <h3>Fasilitas Lengkap</h3>
+        <p>Ruangan nyaman dan peralatan medis lengkap.</p>
+    </div>
+
+</section>
+
+<!-- FORM APPOINTMENT -->
+<section id="appointment" class="container" style="padding: 60px 0;">
+
+    <h2 style="text-align:center; margin-bottom:30px;">
+        Form Janji Pasien
+    </h2>
+
+    <form style="
+        max-width:600px;
+        margin:auto;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    ">
+
+        <input type="text"
+        placeholder="Nama Lengkap"
+        required
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        ">
+
+        <input type="email"
+        placeholder="Email"
+        required
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        ">
+
+        <input type="number"
+        placeholder="Nomor Telepon"
+        required
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        ">
+
+        <select
+        required
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        ">
+
+            <option value="">Pilih Layanan</option>
+            <option>Konsultasi Dokter</option>
+            <option>Vaksinasi</option>
+            <option>Laboratorium</option>
+
+        </select>
+
+        <input type="date"
+        required
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        ">
+
+        <textarea
+        rows="5"
+        placeholder="Keluhan Pasien"
+        style="
+        width:100%;
+        padding:15px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        "></textarea>
+
+        <button type="submit"
+        style="
+        width:100%;
+        padding:15px;
+        background:#009688;
+        color:white;
+        border:none;
+        border-radius:50px;
+        cursor:pointer;
+        font-size:16px;
+        ">
+
+            Kirim Janji
+
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 CH.SehatKita. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- SCRIPT RESPONSIVE BUTTON -->
+<script>
+
+function scrollToForm() {
+
+    document.getElementById("appointment").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+```
