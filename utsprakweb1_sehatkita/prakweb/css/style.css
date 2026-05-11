@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,0.06);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#009688;
+}
+
+/* NAVBAR */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a:hover,
+nav a.active{
+    color:#009688;
+}
+
+nav a.active::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:3px;
+    background:#009688;
+    border-radius:10px;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1400&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h2{
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    color:#f1f1f1;
+}
+
+/* BUTTON */
+
+button{
+    padding:15px 32px;
+    border:none;
+    background:#009688;
+    color:white;
+    font-size:16px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+button:hover{
+    background:#00796b;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SECTION */
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h3{
+    font-size:38px;
+    color:#009688;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* GRID */
+
+.features,
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin:80px auto;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#009688;
+    font-size:24px;
+}
+
+.card p{
+    color:#666;
+}
+
+/* PAGE BANNER */
+
+.page-banner{
+    background:#009688;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.page-banner h2{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+/* APPOINTMENT */
+
+.appointment-section{
+    padding:80px 0;
+}
+
+.appointment-form{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FORM */
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:12px;
+    outline:none;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#009688;
+}
+
+/* ABOUT */
+
+.about-section{
+    padding:80px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-text h3{
+    font-size:34px;
+    color:#009688;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.stats{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    flex:1;
+    min-width:120px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.stat-box h4{
+    font-size:28px;
+    color:#009688;
+}
+
+/* VISION */
+
+.vision-mission{
+    background:#f7f9fc;
+    padding:80px 0;
+}
+
+.vm-grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.vm-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.vm-card h3{
+    color:#009688;
+    margin-bottom:15px;
+}
+
+.vm-card ul{
+    padding-left:20px;
+    color:#555;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 0;
+    margin-top:60px;
+}
+
+/* ANIMATION */
+
+.card,
+.hero-content,
+.vm-card,
+.stat-box{
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .page-banner h2{
+        font-size:34px;
+    }
+
+    .appointment-form{
+        padding:25px;
+    }
+
+}
+
+
+
