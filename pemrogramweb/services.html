@@ -3,288 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - SehatKita</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Services - CH.SehatKita</title>
 
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
 
-        body{
-            background: #f5f7fb;
-            scroll-behavior: smooth;
-        }
-
-        /* HERO */
-
-        .services-hero{
-            height: 320px;
-            background:
-            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-            url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .services-hero h2{
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
-
-        .services-hero p{
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        /* SERVICES */
-
-        .services-section{
-            padding: 80px 10%;
-        }
-
-        .section-title{
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h3{
-            font-size: 40px;
-            color: #009688;
-            margin-bottom: 10px;
-        }
-
-        .section-title p{
-            color: #666;
-        }
-
-        .services-grid{
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-            gap: 30px;
-        }
-
-        .service-card{
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: 0.35s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover{
-            transform: translateY(-10px);
-        }
-
-        .service-card::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: #009688;
-        }
-
-        .service-icon{
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h4{
-            font-size: 24px;
-            color: #222;
-            margin-bottom: 15px;
-        }
-
-        .service-card p{
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* DOCTOR SECTION */
-
-        .doctor-section{
-            padding: 80px 10%;
-            background: white;
-        }
-
-        .doctor-grid{
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .doctor-card{
-            background: #f5f7fb;
-            border-radius: 20px;
-            overflow: hidden;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .doctor-card:hover{
-            transform: translateY(-8px);
-        }
-
-        .doctor-card img{
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .doctor-info{
-            padding: 25px;
-        }
-
-        .doctor-info h4{
-            margin-bottom: 8px;
-            color: #222;
-        }
-
-        .doctor-info p{
-            color: #009688;
-            font-weight: 600;
-        }
-
-        /* BUTTON DOKTER */
-
-        .doctor-info button{
-            margin-top: 15px;
-            padding: 12px 25px;
-            border: none;
-            background: #009688;
-            color: white;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .doctor-info button:hover{
-            background: #00796b;
-        }
-
-        /* FORM KELUHAN */
-
-        .complaint-section{
-            padding: 80px 10%;
-            background: #f5f7fb;
-        }
-
-        .complaint-form{
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        .complaint-form input,
-        .complaint-form textarea{
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 12px;
-            outline: none;
-        }
-
-        .complaint-form button{
-            width: 100%;
-            padding: 15px;
-            border: none;
-            background: #009688;
-            color: white;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .complaint-form button:hover{
-            background: #00796b;
-        }
-
-        /* EMERGENCY */
-
-        .emergency{
-            margin: 80px 10%;
-            background: linear-gradient(135deg,#009688,#00bfa5);
-            padding: 50px;
-            border-radius: 25px;
-            color: white;
-            text-align: center;
-        }
-
-        .emergency h3{
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .emergency p{
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .emergency button{
-            padding: 15px 35px;
-            border: none;
-            background: white;
-            color: #009688;
-            font-size: 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .emergency button:hover{
-            transform: scale(1.05);
-        }
-
-        /* MOBILE */
-
-        @media(max-width:768px){
-
-            .services-hero h2{
-                font-size: 36px;
-            }
-
-            .section-title h3{
-                font-size: 32px;
-            }
-
-            .emergency h3{
-                font-size: 28px;
-            }
-
-            .services-section,
-            .doctor-section,
-            .complaint-section{
-                padding: 60px 6%;
-            }
-
-            .emergency{
-                margin: 60px 6%;
-                padding: 35px 20px;
-            }
-
-        }
-
-    </style>
 </head>
 <body>
 
 <header>
     <div class="container nav-container">
-        <h1 class="logo">SehatKita</h1>
+
+        <h1 class="logo">CH.SehatKita</h1>
 
         <nav>
             <ul>
@@ -293,197 +24,60 @@
                 <li><a href="services.html" class="active">Services</a></li>
             </ul>
         </nav>
+
     </div>
 </header>
 
-<!-- HERO -->
-<section class="services-hero">
-
-    <div>
-        <h2>Layanan Rumah Sakit</h2>
-        <p>Pelayanan kesehatan modern dengan fasilitas lengkap dan profesional</p>
+<section class="page-banner">
+    <div class="container">
+        <h2>Layanan Kami</h2>
+        <p>Pelayanan kesehatan modern dengan fasilitas lengkap</p>
     </div>
-
 </section>
 
-<!-- SERVICES -->
-<section class="services-section">
-
-    <div class="section-title">
-        <h3>Pelayanan Kami</h3>
-        <p>Kami menyediakan berbagai layanan kesehatan terbaik</p>
-    </div>
+<section class="services-section container">
 
     <div class="services-grid">
 
-        <div class="service-card">
-            <div class="service-icon">🩺</div>
-            <h4>Konsultasi Dokter</h4>
-            <p>
-                Pemeriksaan dan konsultasi langsung dengan dokter profesional
-                yang berpengalaman di bidang kesehatan.
-            </p>
+        <div class="card">
+            <h3>🩺 Konsultasi Dokter</h3>
+            <p>Pemeriksaan langsung dengan dokter profesional.</p>
         </div>
 
-        <div class="service-card">
-            <div class="service-icon">💉</div>
-            <h4>Vaksinasi</h4>
-            <p>
-                Layanan vaksinasi aman dan terpercaya untuk anak maupun dewasa
-                dengan standar medis modern.
-            </p>
+        <div class="card">
+            <h3>💉 Vaksinasi</h3>
+            <p>Layanan vaksinasi aman dan terpercaya.</p>
         </div>
 
-        <div class="service-card">
-            <div class="service-icon">🧪</div>
-            <h4>Laboratorium</h4>
-            <p>
-                Pemeriksaan laboratorium lengkap dengan hasil yang cepat,
-                akurat, dan terpercaya.
-            </p>
+        <div class="card">
+            <h3>🧪 Laboratorium</h3>
+            <p>Pemeriksaan laboratorium lengkap dan cepat.</p>
         </div>
 
-        <div class="service-card">
-            <div class="service-icon">🚑</div>
-            <h4>UGD 24 Jam</h4>
-            <p>
-                Unit gawat darurat siap melayani pasien selama 24 jam
-                dengan tenaga medis siaga.
-            </p>
+        <div class="card">
+            <h3>🚑 UGD 24 Jam</h3>
+            <p>Tim medis siap melayani selama 24 jam.</p>
         </div>
 
-        <div class="service-card">
-            <div class="service-icon">❤️</div>
-            <h4>Pemeriksaan Jantung</h4>
-            <p>
-                Pemeriksaan kesehatan jantung dengan teknologi modern
-                dan dokter spesialis terpercaya.
-            </p>
+        <div class="card">
+            <h3>❤️ Pemeriksaan Jantung</h3>
+            <p>Pemeriksaan kesehatan jantung modern.</p>
         </div>
 
-        <div class="service-card">
-            <div class="service-icon">👶</div>
-            <h4>Kesehatan Anak</h4>
-            <p>
-                Pelayanan kesehatan khusus anak dengan dokter spesialis
-                anak yang ramah dan profesional.
-            </p>
+        <div class="card">
+            <h3>👶 Kesehatan Anak</h3>
+            <p>Pelayanan kesehatan khusus anak terpercaya.</p>
         </div>
 
     </div>
-
-</section>
-
-<!-- DOCTOR -->
-<section class="doctor-section">
-
-    <div class="section-title">
-        <h3>Dokter Profesional</h3>
-        <p>Ditangani langsung oleh tenaga medis berpengalaman</p>
-    </div>
-
-    <div class="doctor-grid">
-
-        <div class="doctor-card">
-            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200">
-
-            <div class="doctor-info">
-                <h4>Dr. Andi Saputra</h4>
-                <p>Dokter Umum</p>
-
-                <button onclick="goToComplaint()">
-                    Konsultasi
-                </button>
-            </div>
-        </div>
-
-        <div class="doctor-card">
-            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1200">
-
-            <div class="doctor-info">
-                <h4>Dr. Sarah Putri</h4>
-                <p>Dokter Anak</p>
-
-                <button onclick="goToComplaint()">
-                    Konsultasi
-                </button>
-            </div>
-        </div>
-
-        <div class="doctor-card">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200">
-
-            <div class="doctor-info">
-                <h4>Dr. Bima Prakoso</h4>
-                <p>Spesialis Jantung</p>
-
-                <button onclick="goToComplaint()">
-                    Konsultasi
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FORM KELUHAN -->
-<section id="complaint" class="complaint-section">
-
-    <div class="section-title">
-        <h3>Form Keluhan Pasien</h3>
-        <p>Silahkan isi data keluhan Anda</p>
-    </div>
-
-    <form class="complaint-form">
-
-        <input type="text" placeholder="Nama Lengkap" required>
-
-        <input type="text" placeholder="Nomor Telepon" required>
-
-        <textarea rows="6"
-        placeholder="Tuliskan keluhan Anda..."
-        required></textarea>
-
-        <button type="submit">
-            Kirim Keluhan
-        </button>
-
-    </form>
-
-</section>
-
-<!-- EMERGENCY -->
-<section class="emergency">
-
-    <h3>Butuh Bantuan Darurat?</h3>
-
-    <p>
-        Tim medis kami siap membantu Anda selama 24 jam penuh.
-    </p>
-
-    <button>Hubungi Sekarang</button>
 
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2025 SehatKita. All Rights Reserved.</p>
+        <p>&copy; 2025 CH.SehatKita. All Rights Reserved.</p>
     </div>
 </footer>
-
-<!-- SCRIPT RESPONSIVE -->
-<script>
-
-function goToComplaint() {
-
-    document.getElementById("complaint").scrollIntoView({
-        behavior: "smooth"
-    });
-
-}
-
-</script>
 
 </body>
 </html>
